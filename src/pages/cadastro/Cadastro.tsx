@@ -4,7 +4,7 @@ function Cadastro() {
     return (
         <>
             <div className="grid grid-cols-1 lg:grid-cols-2 h-screen 
-            place-items-center font-bold">
+            place-items-center">
                 <div className="fundoCadastro hidden lg:block font-bold"></div>
                 <form className='flex justify-center items-center flex-col w-2/3 gap-3' >
                     <h2 className='text-slate-900 text-5xl'>Cadastrar</h2>
@@ -69,7 +69,7 @@ function Cadastro() {
                         <button
                             type='submit'
                             className='rounded text-white bg-cyan-500 
-                           hover:bg-indigo-900 w-1/2 py-2
+                           hover:bg-cyan-900 w-1/2 py-2
                            flex justify-center'
                         >
                             Cadastrar
