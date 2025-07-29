@@ -31,8 +31,8 @@ function Login() {
                     </div>
                     <button
                         type='submit'
-                        className="rounded bg-cyan-500 flex justify-center
-                                   hover:bg-cyan-900 text-white w-1/2 py-2">
+                        className="rounded bg-fuchsia-400 flex justify-center
+                                   hover:bg-fuchsia-800 text-white w-1/2 py-2">
                         <span>Entrar</span>
                     </button>
 

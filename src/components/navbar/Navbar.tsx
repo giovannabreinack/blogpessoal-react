@@ -2,7 +2,7 @@ function Navbar() {
     return (
         <>
             <div className='w-full flex justify-center py-4
-            			   bg-cyan-500 text-white'>
+            			   bg-fuchsia-400 text-white'>
             
                 <div className="container flex justify-between text-lg font-serif">
                     Blog Pessoal

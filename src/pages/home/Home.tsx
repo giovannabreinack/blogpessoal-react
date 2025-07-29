@@ -23,7 +23,7 @@ function Home() {
 
                     <div className="flex justify-center ">
                         <img
-                            src="https://ik.imagekit.io/zddqh4rhi/ilustracao-da-pagina-inicial-da-web-criativa.png?updatedAt=1753721380359"
+                            src="https://ik.imagekit.io/zddqh4rhi/ilustracao-da-proxima-etapa-do-gradiente.png?updatedAt=1753788300908"
                             alt="Imagem Página Home"
                             className='w-2/3'
                         />
