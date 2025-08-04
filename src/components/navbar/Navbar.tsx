@@ -18,7 +18,7 @@ function Navbar() {
     return (
         <>
             <div className='w-full flex justify-center py-4
-            	        bg-gradient-to-r from-sky-700 via-purple-500 to-fuchsia-500 text-white'>
+            	        bg-gradient-to-r from-sky-700 via-purple-500 to-fuchsia-500 text-white text-shadow-lg'>
 
                 <div className="container flex justify-between text-lg font-serif">
                     <Link to='/home' className="text-2xl font-bold">Blog Pessoal</Link>

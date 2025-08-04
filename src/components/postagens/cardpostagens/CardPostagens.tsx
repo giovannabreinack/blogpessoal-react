@@ -17,7 +17,7 @@ function CardPostagens({ postagem }: CardPostagensProps) {
                         src={postagem.usuario?.foto}
                         className='h-12 rounded-full'
                         alt={postagem.usuario?.nome} />
-                    <h3 className='text-lg font-bold text-center uppercase'>
+                    <h3 className='text-lg font-bold text-center uppercase text-white'>
                         {postagem.usuario?.nome}
                     </h3>
                 </div>

@@ -33,10 +33,10 @@ function Perfil() {
 
                 <div
                     className="relative mt-[-6rem] h-72 flex flex-col 
-                    bg-sky-700 text-white text-2xl items-center justify-center"
+                    bg-sky-700 text-white text-2xl items-center justify-center font-serif text-shadow-lg"
                 >
                     <p>Nome: {usuario.nome} </p>
-                    <p>Email: {usuario.usuario}</p>
+                    <p>E-mail: {usuario.usuario}</p>
                 </div>
             </div>
         </div>
