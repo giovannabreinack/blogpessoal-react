@@ -1,9 +1,11 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { type ChangeEvent, type FormEvent, useEffect, useState } from 'react';
 import { RotatingLines } from 'react-loader-spinner';
 import { useNavigate } from 'react-router-dom';
 import type Usuario from '../../models/Usuario';
 import { cadastrarUsuario } from '../../services/Service';
+import { ToastAlerta } from '../../utils/ToastAlerta';
 import './Cadastro.css';
 
 function Cadastro() {
@@ -51,14 +53,12 @@ function Cadastro() {
 
             try {
                 await cadastrarUsuario(`/usuarios/cadastrar`, usuario, setUsuario);
-                alert('Usuário cadastrado com sucesso!');
+                ToastAlerta("Usuário cadastrado com sucesso!", "sucesso")
             } catch (error) {
-                alert('Erro ao cadastrar o usuário!');
+                ToastAlerta("Erro ao cadastrar o usuário!", "erro")
             }
         } else {
-            alert(
-                'Dados do usuário inconsistentes! Verifique as informações do cadastro.'
-            );
+            ToastAlerta("Dados do usuário inconsistentes! Verifique as informações do cadastro.!", "erro")
             setUsuario({ ...usuario, senha: '' });
             setConfirmaSenha('');
         }

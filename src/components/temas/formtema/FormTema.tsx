@@ -2,11 +2,12 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 import { type ChangeEvent, useContext, useEffect, useState } from "react";
+import { RotatingLines } from "react-loader-spinner";
 import { useNavigate, useParams } from "react-router";
 import { AuthContext } from "../../../contexts/AuthContext";
 import type Tema from "../../../models/Tema";
 import { atualizar, buscar, cadastrar } from "../../../services/Service";
-import { RotatingLines } from "react-loader-spinner";
+import { ToastAlerta } from "../../../utils/ToastAlerta";
 
 function FormTema() {
 
@@ -34,7 +35,7 @@ function FormTema() {
 
     useEffect(() => {
         if (token === '') {
-            alert('Você precisa estar logado!')
+            ToastAlerta('Você precisa estar logado!', 'info')
             navigate('/')
         }
     }, [token])
@@ -65,12 +66,12 @@ function FormTema() {
                 await atualizar(`/temas`, tema, setTema, {
                     headers: { 'Authorization': token }
                 })
-                alert('O Tema foi atualizado com sucesso!')
+                ToastAlerta("O Tema foi atualizado com sucesso!", "sucesso")
             } catch (error: any) {
                 if (error.toString().includes('403')) {
                     handleLogout();
                 } else {
-                    alert('Erro ao atualizar o tema.')
+                    ToastAlerta("Erro ao atualizar o tema.", "erro")
                 }
 
             }
@@ -79,12 +80,12 @@ function FormTema() {
                 await cadastrar(`/temas`, tema, setTema, {
                     headers: { 'Authorization': token }
                 })
-                alert('O Tema foi cadastrado com sucesso!')
+                ToastAlerta("O Tema foi cadastrado com sucesso!", "sucesso")
             } catch (error: any) {
                 if (error.toString().includes('403')) {
                     handleLogout();
                 } else {
-                    alert('Erro ao cadastrar o tema.')
+                    ToastAlerta("Erro ao cadastrar o tema.", "erro")
                 }
 
             }
